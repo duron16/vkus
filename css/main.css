@@ -1,0 +1,136 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, sub, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, body, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ul {list-style: none;}
+ol {list-style-position: inside;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: '';content: none;}
+table {border-collapse: collapse;border-spacing: 0;}
+h1, h2, h3, h4, h5 {text-align: center; font-weight: bold; margin: 10px 0;}
+html {height: 100%;}
+a {text-decoration: none !important; color: #000;}
+textarea {resize: none;}
+* {outline: none;}
+a, button {
+    transition: background .2s linear, color .2s linear;
+    -webkit-transition: background .2s linear, color .2s linear;
+    -moz-transition: background .2s linear, color .2s linear;
+    -ms-transition: background .2s linear, color .2s linear;
+    -o-transition: background .2s linear, color .2s linear;
+}
+.clear {clear: both;}
+.hidden {display: none;}
+
+@font-face {
+    font-family: OpenSans;
+    src: url('../fonts/OpenSans-Regular.ttf');
+}
+@font-face {
+    font-family: OpenSansLight;
+    src: url('../fonts/OpenSans-Light.ttf');
+}
+@font-face {
+    font-family: 'OpenSansBold';
+    src: url("../fonts/OpenSansBold.eot");
+    src: url("../fonts/OpenSansBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/OpenSansBold.woff") format("woff"),
+    url("../fonts/OpenSansBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: Panton;
+    src: url('../fonts/Panton-Regular.otf');
+}
+@font-face {
+    font-family: PantonBold;
+    src: url('../fonts/Panton-Bold.otf');
+}
+
+@font-face {
+    font-family: 'SegoeUIRegular';
+    src: url("../fonts/SegoeUIRegular.eot");
+    src: url("../fonts/SegoeUIRegular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/SegoeUIRegular.woff") format("woff"),
+    url("../fonts/SegoeUIRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'SegoeUIItalic';
+    src: url("../fonts/SegoeUIItalic.eot");
+    src: url("../fonts/SegoeUIItalic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/SegoeUIItalic.woff") format("woff"),
+    url("../fonts/SegoeUIItalic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'SegoeUILight';
+    src: url("../fonts/SegoeUILight.eot");
+    src: url("../fonts/SegoeUILight.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/SegoeUILight.woff") format("woff"),
+    url("../fonts/SegoeUILight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/*--table-frame--*/
+.table {
+    display: table;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #D5EBF5;
+}
+.table-caption .cell {
+    background: #D5EBF5 !important;
+    font-weight: bold !important;
+    padding: 8px !important;
+}
+.row {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+.cell {
+    display: table-cell;
+    vertical-align: top;
+    padding: 5px;
+    background: #F4F5F6;
+    border: 1px solid #D5EBF5;
+    box-sizing: border-box;
+}
+body {
+    height: 100%;
+    width: 100%;
+    background: #ccc;
+    font: 100% Panton, Arial, sans-serif;
+    color: #666;
+    line-height: 1;
+}
+.wrapper {
+    width: 100%;
+    min-height: 100%;
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+/*    outline: 1px solid red;*/
+}
+/*--header--*/
+.header {
+    
+}
+.header-slider {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+.header-top {
+    height: 80px;
+    background: rgba(255,255,255,.3);
+}
+.header-top .logo {
+    float: left;
+    margin-top: 20px;
+}
