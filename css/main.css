@@ -74,7 +74,15 @@ a, button {
     font-style: normal;
     font-weight: normal;
 }
-
+@font-face {
+    font-family: 'SegoeUIBold';
+    src: url("../fonts/SegoeUIBold.eot");
+    src: url("../fonts/SegoeUIBold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/SegoeUIBold.woff") format("woff"),
+    url("../fonts/SegoeUIBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
 /*--table-frame--*/
 .table {
     display: table;
@@ -118,9 +126,6 @@ body {
 /*    outline: 1px solid red;*/
 }
 /*--header--*/
-.header {
-    
-}
 .header-slider {
     position: absolute;
     top: 0;
@@ -128,9 +133,50 @@ body {
 }
 .header-top {
     height: 80px;
-    background: rgba(255,255,255,.3);
+    background: linear-gradient(to right, rgba(244,210,71,.7)70%,rgba(233,169,69,.7));
 }
 .header-top .logo {
     float: left;
     margin-top: 20px;
+    margin-right: 5px;
+}
+.nav {
+    float: left;
+}
+.nav li {
+    float: left;
+    padding: 10px 0;
+}
+.nav li a {
+    display: block;
+    padding: 20px 20px;
+    font: 88% "SegoeUIRegular";
+    color: #fff;
+    text-transform: uppercase;
+}
+.nav li a:hover {
+    background: #E9A945;
+}
+.header .phones {
+    padding-left: 8.1%;
+    font: 138% "SegoeUIBold";
+    color: #fff;
+    display: table;
+    height: 80px;
+    float: left;
+}
+.header .phones li {
+    display: table-row;
+}
+.header .phones li span {
+    display: table-cell;
+    vertical-align: middle;
+}
+.header .menu {
+    float: right;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    margin-right: 30px;
+    background: url(../img/menu-bg.png) 0 0 no-repeat;
 }
