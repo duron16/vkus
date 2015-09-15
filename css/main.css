@@ -176,6 +176,7 @@ body {
     float: right;
     width: 32px;
     height: 32px;
+    margin-top: 24px;
     cursor: pointer;
     margin-right: 30px;
     background: url(../img/menu-bg.png) 0 0 no-repeat;
