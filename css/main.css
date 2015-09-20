@@ -274,4 +274,22 @@ body {
     text-transform: uppercase;
     line-height: 1.5;
     font-size: 331.25%;
+    display: table;
 }
+
+.dish-demo {
+/*    outline: 1px solid red;*/
+}
+.dish-demo .dish-demo-item {
+    outline: 1px solid red;
+    width: 25%;
+    display: inline-block;
+    background: #C89E62;
+    padding: 36px 16px;
+    box-sizing: border-box;
+}
+.dish-demo .dish-demo-item .caption {
+    border-top: 4px solid #fff;
+    padding: 27px 0 13px;
+}
+.dish-demo {}
