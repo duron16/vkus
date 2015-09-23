@@ -22,11 +22,15 @@ a, button {
 .hidden {display: none;}
 
 @font-face {
-    font-family: OpenSans;
+    font-family: "OpenSans";
     src: url('../fonts/OpenSans-Regular.ttf');
 }
 @font-face {
-    font-family: OpenSansLight;
+    font-family: "AABebasNeue";
+    src: url('../fonts/AA-BebasNeue.ttf');
+}
+@font-face {
+    font-family: "OpenSansLight";
     src: url('../fonts/OpenSans-Light.ttf');
 }
 @font-face {
@@ -39,14 +43,13 @@ a, button {
     font-weight: normal;
 }
 @font-face {
-    font-family: Panton;
+    font-family: "Panton";
     src: url('../fonts/Panton-Regular.otf');
 }
 @font-face {
-    font-family: PantonBold;
+    font-family: "PantonBold";
     src: url('../fonts/Panton-Bold.otf');
 }
-
 @font-face {
     font-family: 'SegoeUIRegular';
     src: url("../fonts/SegoeUIRegular.eot");
@@ -128,6 +131,8 @@ body {
 /*--header--*/
 .header {
     height: 80px;
+    position: relative;
+    z-index: 100;
     background: linear-gradient(to right, rgba(244,210,71,.7)70%,rgba(233,169,69,.7));
 }
 .header .container:after {
@@ -137,8 +142,19 @@ body {
 }
 .header .logo {
     float: left;
-    margin-top: 20px;
+    width: 246px;
+    width: 25.625%;
+    height: 80px;
+    position: relative;
     margin-right: 5px;
+}
+.header .logo a {
+    width: 100%;
+    position: absolute;
+    top: 20px;
+}
+.header .logo a img {
+    width: 100%;
 }
 .nav {
     float: left;
@@ -181,6 +197,7 @@ body {
     background: url(../img/menu-bg.png) 0 0 no-repeat;
 }
 .header .menu #showMenu {
+    z-index: 9999;
     display: none;
     width: 455px;
     background: #EAEAEA;
@@ -192,6 +209,7 @@ body {
 .header .menu #showMenu .header-btn {
     text-align: center;
     height: 80px;
+    position: relative;
 }
 .header .menu #showMenu .menu {
     float: none;
@@ -257,30 +275,34 @@ body {
 }
 /*--slider--*/
 .slider-wrap {
-    position: absolute;
-    top: 0;
-    z-index: -1;
+    position: relative;
+    top: -80px;
 }
 .slider-wrap .slider {
-    position: relative;
+    z-index: -1;
+    outline: 1px solid red;
 }
 .slider-bottom {
     position: absolute;
     top: 30%;bottom: 0;left: 0;right: 0;
-    z-index: 5;
+    z-index: 10;
 }
 .slider-bottom .slider-caption {
     color: #fff;
     text-transform: uppercase;
     line-height: 1.5;
-    font-size: 331.25%;
-    display: table;
+    font: 331.25% "AABebasNeue";
+    outline: 1px solid red;
+}
+.slider-bottom .slider-caption span {
+    font: 45.28% "SegoeUIRegular";
 }
 
 .dish-popular {
 /*    outline: 1px solid red;*/
     height: 326px;
-    z-index: 5;
+/*    position: relative;*/
+/*    z-index: 100;*/
 }
 .dish-popular .dish-popular-item {
 /*    outline: 1px solid red;*/
@@ -294,7 +316,8 @@ body {
 }
 .dish-popular-inner {
     padding: 36px 16px;
-    background: url(../img/pan.png) right bottom no-repeat;
+    background: url(../img/pan.png) right 93% no-repeat;
+/*    outline: 1px solid red;*/
 }
 .dish-popular-inner a {
     display: inline-block;
@@ -303,7 +326,6 @@ body {
     padding: 8px 40px 8px 12px;
     box-sizing: border-box;
     background: #fff url(../img/arrow-rr.png) 95% center no-repeat;
-
 }
 .dish-popular .dish-popular-item .img-wrap {
     height: 163px;
@@ -311,7 +333,17 @@ body {
 .dish-popular .dish-popular-item .caption {
     border-top: 4px solid #fff;
     padding: 27px 0 13px;
+    font: 150% "SegoeUIRegular";
+}
+.dish-popular .dish-popular-item .dish {
+    height: 100px;
+    overflow: hidden;
 }
 .dish-popular .dish-blue {
     background: #8CB8E5 !important;
+}
+/*--base-nutrition-box--*/
+.base-nutrition-box {
+    background: #fff;
+    padding: 55px 0;
 }
