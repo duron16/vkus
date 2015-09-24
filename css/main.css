@@ -292,7 +292,6 @@ body {
     text-transform: uppercase;
     line-height: 1.5;
     font: 331.25% "AABebasNeue";
-    outline: 1px solid red;
 }
 .slider-bottom .slider-caption span {
     font: 45.28% "SegoeUIRegular";
@@ -326,6 +325,13 @@ body {
     padding: 8px 40px 8px 12px;
     box-sizing: border-box;
     background: #fff url(../img/arrow-rr.png) 95% center no-repeat;
+    transition: box-shadow .1s linear;
+}
+.dish-popular-inner a:hover {
+    box-shadow: 0 0 20px #555;
+}
+.dish-popular-inner a:active {
+    box-shadow: 0 0 20px #555, inset 0 0 30px #aaa;
 }
 .dish-popular .dish-popular-item .img-wrap {
     height: 163px;
@@ -346,4 +352,5 @@ body {
 .base-nutrition-box {
     background: #fff;
     padding: 55px 0;
+    margin-top: -80px;
 }
