@@ -111,6 +111,13 @@ a, button {
     border: 1px solid #D5EBF5;
     box-sizing: border-box;
 }
+h2 {
+    width: 55%;
+    color: #c89e62;
+    font: 331.25% "AABebasNeue";
+    text-align: left;
+    margin-bottom: 35px;
+}
 body {
     height: 100%;
     width: 100%;
@@ -280,11 +287,10 @@ body {
 }
 .slider-wrap .slider {
     z-index: -1;
-    outline: 1px solid red;
 }
 .slider-bottom {
     position: absolute;
-    top: 30%;bottom: 0;left: 0;right: 0;
+    top: 25%;bottom: 0;left: 0;right: 0;
     z-index: 10;
 }
 .slider-bottom .slider-caption {
@@ -294,7 +300,10 @@ body {
     font: 331.25% "AABebasNeue";
 }
 .slider-bottom .slider-caption span {
+    display: block;
+    margin: 5px 0 50px;
     font: 45.28% "SegoeUIRegular";
+    text-transform: none;
 }
 
 .dish-popular {
@@ -353,4 +362,57 @@ body {
     background: #fff;
     padding: 55px 0;
     margin-top: -80px;
+}
+h2 {
+    width: 55%;
+    color: #c89e62;
+    font: 331.25% "AABebasNeue";
+    text-align: left;
+    margin-bottom: 35px;
+}
+.base-nutrition-video-wrap {
+
+}
+.base-nutrition-video-wrap:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.base-nutrition-video-main {
+    outline: 1px solid red;
+    width: 58.33%;
+    float: left;
+}
+.base-nutrition-video {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+.base-nutrition-video-dscr {
+    background: #C89E62;
+}
+.base-nutrition-video-main .play-btn {
+    position: absolute;
+    width: 84px;
+    height: 84px;
+    top: 0; left: 0; right: 0; bottom: 0;
+    margin: auto;
+    border-radius: 50%;
+    background: transparent url(../img/video-btn.png) center center no-repeat;
+    cursor: pointer;
+    transition: transform .1s linear;
+    -webkit-transition: transform .1s linear;
+    -moz-transition: transform .1s linear;
+    -ms-transition: transform .1s linear;
+    -o-transition: transform .1s linear;
+}
+.base-nutrition-video-main .play-btn:hover {
+    transform: scale(1.2);
+}
+.base-nutrition-video-list {
+
+}
+.video-list-item {
+
 }
