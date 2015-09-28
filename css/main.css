@@ -116,7 +116,9 @@ h2 {
     color: #c89e62;
     font: 331.25% "AABebasNeue";
     text-align: left;
-    margin-bottom: 35px;
+    margin: 0;
+    padding: 50px 0 25px;
+    text-transform: uppercase;
 }
 body {
     height: 100%;
@@ -228,11 +230,7 @@ body {
     padding: 0 20px 0 86px;
     text-transform: uppercase;
     color: #fff;
-/*    background: linear-gradient(to left,#000,#fff) url(../img/recipes-bg.png) 30px center no-repeat;*/
-/*    background-image: url(../img/recipes-bg.png);*/
-/*    background-position: 30px center;*/
-/*    background-repeat: no-repeat;*/
-    background: linear-gradient(to right, #000, #fff);
+    background: #EAAD45 url(../img/recipes-bg.png) 30px center no-repeat;
 }
 .header .menu ul {
     padding: 15px 0;
@@ -363,15 +361,9 @@ body {
     padding: 55px 0;
     margin-top: -80px;
 }
-h2 {
-    width: 55%;
-    color: #c89e62;
-    font: 331.25% "AABebasNeue";
-    text-align: left;
-    margin-bottom: 35px;
-}
 .base-nutrition-video-wrap {
-
+    height: 372px;
+    margin-top: 25px;
 }
 .base-nutrition-video-wrap:after {
     content: '';
@@ -379,7 +371,6 @@ h2 {
     clear: both;
 }
 .base-nutrition-video-main {
-    outline: 1px solid red;
     width: 58.33%;
     float: left;
 }
@@ -410,9 +401,150 @@ h2 {
 .base-nutrition-video-main .play-btn:hover {
     transform: scale(1.2);
 }
-.base-nutrition-video-list {
-
+.base-nutrition-video-dscr {
+    background: #C89E62;
+    color: #fff;
+    font: 88% "AABebasNeue";
+    padding: 5px 10px;
 }
-.video-list-item {
+.base-nutrition-video-list,
+.base-nutrition-video-dscr {
+    box-shadow: -8px 8px 20px #cfcfcf;
+}
+.base-nutrition-video-dscr .video-dscr-bottom a,
+.base-nutrition-video-dscr .video-dscr-bottom {
+    color: #787276;
+    font: 88% "SegoeUIRegular";
+}
+.base-nutrition-video-dscr .video-dscr-bottom a:hover {
+    text-decoration: underline;
+    color: #353535;
+}
+.base-nutrition-video-dscr .video-dscr-bottom:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.base-nutrition-video-dscr .video-dscr-bottom .category {
+    float: left;
+}
+.base-nutrition-video-dscr .video-dscr-bottom .date {
+    float: right;
+    margin-right: 10px;
+}
+.base-nutrition-video-dscr .video-dscr-bottom .reviews {
+    float: right;
+    padding-left: 20px;
+    background: url(../img/views.png) left center no-repeat;
+}
+ul.base-nutrition-video-list {
+    float: right;
+    width: 39.58%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-y: scroll;
+}
+ul.base-nutrition-video-list li + li {
+    border-top: 1px solid #A6A6A6;
+}
+li.video-list-item > a {
+    display: block;
+    padding: 10px;
+    color: #c89e62;
+    font: 75% "SegoeUIRegular";
+}
+li.video-list-item > a:hover {
+    background: #BDBDBD;
+    color: #fff;
+}
+li.video-list-item a:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+li.video-list-item {
+    background: #EAEAEA;
+}
+.video-list-item .video-wrap {
+    width: 72px;
+    height: 54px;
+    overflow: hidden;
+    margin-right: -72px;
+}
+li.video-list-item .video-dscr-wrap {
+    display: block;
+    float: right;
+    padding-left: 82px;
+    padding-bottom: 18px;
+    width: 100%;
+    min-height: 54px;
+    box-sizing: border-box;
+    position: relative;
+}
+li.video-list-item .video-dscr-wrap span {
+    display: block;
+}
+li.video-list-item .video-dscr-wrap .name {
+    font: 116.67% "AABebasNeue";
+}
+li.video-list-item .video-dscr-wrap .date {
+    color: #787276;
+    position: absolute;
+    bottom: 0;
+    left: 82px;
+}
+/*--packages-box--*/
+.packages-box {
+    background: url(../img/packages-bg.jpg) center center no-repeat;
+    background-size: cover;
+    padding-bottom: 34px;
+}
+.packages-box h2 {
+    color: #fff;
+}
+.package {
+    width: 21.76%;
+    margin: 0 1.04%;
+    position: relative;
+    outline: 1px solid red;
+    background: #EAEAEA;
+    padding: 25px 2.4% 15px;
+    color: #e9a945;
+}
+.packages-box .slider2 {
+    padding: 0 7.08%;
+    outline: 1px solid red;
+    margin-bottom: 100px;
+}
+.package .price {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #85AFDA;
+    padding: 5px 25px 6px 20px;
+    font: 113% "AABebasNeue";
+    color: #fff;
+    text-transform: uppercase;
+    line-height: .9;
+}
+.package .price span {
+    color: #e9a945;
+    font-size: 89%;
+    text-decoration: line-through;
+}
+.package .img-wrap {
+    padding-bottom: 5px;
+    border-bottom: 4px solid #EFBF46;
+    margin-bottom: 12px;
+}
+.package .amount-clips {
+    font: 150% "SegoeUIRegular";
+    margin-bottom: 8px;
+}
+.package .category {
+    font: 225% "AABebasNeue";
+    line-height: 1.2;
+}
+.package a.btn {
 
 }
