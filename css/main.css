@@ -503,10 +503,10 @@ li.video-list-item .video-dscr-wrap .date {
     color: #fff;
 }
 .package {
+/*    width: 718px;*/
     width: 21.76%;
     margin: 0 1.04%;
     position: relative;
-    outline: 1px solid red;
     background: #EAEAEA;
     padding: 25px 2.4% 15px;
     color: #e9a945;
@@ -546,5 +546,10 @@ li.video-list-item .video-dscr-wrap .date {
     line-height: 1.2;
 }
 .package a.btn {
-
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+    color: #fff;
+    font: 22px "SegoeUIRegular";
+    background: #EFBF46 url(../img/package-arrow.png) 92% center no-repeat;
 }
