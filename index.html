@@ -7,6 +7,7 @@
     <title>Vkusno Life</title>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsiveslides.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
     <script src="js/jquery-1.11.3.min.js"></script>
     <script src="js/responsiveslides.min.js"></script>
     <script src="js/common.js"></script>
@@ -259,7 +260,7 @@
                                     <img src="img/package-img.png" alt="q123">
                                 </div>
                                 <div class="amount-clips">10 роликов</div>
-                                <div class="category">ГРЕЧЕСКая кухня</div>
+                                <div class="category">ГРЕЧЕСКая <br> кухня</div>
                                 <a href="#" class="btn">Заказать</a>
                             </div>
                             <div class="package">
@@ -272,7 +273,7 @@
                                     <img src="img/package-img.png" alt="q123">
                                 </div>
                                 <div class="amount-clips">10 роликов</div>
-                                <div class="category">ГРЕЧЕСКая кухня</div>
+                                <div class="category">МЕКСИКАНСКАЯ кухня</div>
                                 <a href="#" class="btn">Заказать</a>
                             </div>
                             <div class="package">
@@ -285,12 +286,31 @@
                                     <img src="img/package-img.png" alt="q123">
                                 </div>
                                 <div class="amount-clips">10 роликов</div>
-                                <div class="category">ГРЕЧЕСКая кухня</div>
+                                <div class="category">Украинская кухня</div>
                                 <a href="#" class="btn">Заказать</a>
                             </div>
                         </div>
                     </div>
-                </div><!--packages-box-enf-->
+                </div><!--packages-box-end-->
+                <div class="main-video-box">
+                    <div class="container">
+                        <h2>Видео</h2>
+                        <a href="#" class="main-video-item">
+                            <span class="img-wrap">
+                                <img src="img/main-video-item.jpg" alt="q123">
+                                <span class="view"></span>
+                                <span class="play"></span>
+                            </span>
+                            <span class="dscr">
+                                <span class="name">Сытные и вкусные завтраки для всей семьи</span>
+                                <span class="bottom">
+                                    <span class="cat">Греческая кухня</span>
+                                    <span class="date">5 дней назад</span>
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div><!--video-box-->
             </div><!--main-page-end-->
         </div><!--content-end-->
     </div>
@@ -310,6 +330,18 @@
                 visible = true;
             }
         }
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".slider2").owlCarousel({
+                loop: true,
+                autoplay: true,
+                items: 3,
+                nav: true,
+                autoplayTimeout: 7000,
+                navText: ["&nbsp;","&nbsp;"],
+            });
+        });
     </script>
 </body>
 </html>

@@ -4,4 +4,3 @@ $(function() {
                 timeout: 7000,
             });
         });
-

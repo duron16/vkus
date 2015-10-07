@@ -358,7 +358,7 @@ body {
 /*--base-nutrition-box--*/
 .base-nutrition-box {
     background: #fff;
-    padding: 55px 0;
+    padding-bottom: 55px;
     margin-top: -80px;
 }
 .base-nutrition-video-wrap {
@@ -503,23 +503,26 @@ li.video-list-item .video-dscr-wrap .date {
     color: #fff;
 }
 .package {
-/*    width: 718px;*/
-    width: 21.76%;
-    margin: 0 1.04%;
+/*    width: 255px;*/
+    width: 92%;
+    box-sizing: border-box;
+    margin: 0 4%;
     position: relative;
     background: #EAEAEA;
-    padding: 25px 2.4% 15px;
+    padding: 25px 6.4% 15px;
     color: #e9a945;
 }
 .packages-box .slider2 {
-    padding: 0 7.08%;
-    outline: 1px solid red;
+/*    padding: 0 65px;*/
+    padding: 0 6.8%;
+    box-sizing: border-box;
     margin-bottom: 100px;
 }
 .package .price {
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 5;
     background: #85AFDA;
     padding: 5px 25px 6px 20px;
     font: 113% "AABebasNeue";
@@ -533,9 +536,14 @@ li.video-list-item .video-dscr-wrap .date {
     text-decoration: line-through;
 }
 .package .img-wrap {
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     border-bottom: 4px solid #EFBF46;
     margin-bottom: 12px;
+    text-align: center;
+}
+.package .img-wrap img {
+    max-width: 70%;
+    margin: auto;
 }
 .package .amount-clips {
     font: 150% "SegoeUIRegular";
@@ -547,9 +555,56 @@ li.video-list-item .video-dscr-wrap .date {
 }
 .package a.btn {
     display: block;
+    margin-top: 6px;
     padding: 10px 0;
     text-align: center;
     color: #fff;
     font: 22px "SegoeUIRegular";
     background: #EFBF46 url(../img/package-arrow.png) 92% center no-repeat;
+    transition: box-shadow .1s linear;
+    -webkit-transition: box-shadow .1s linear;
+    -moz-transition: box-shadow .1s linear;
+    -ms-transition: box-shadow .1s linear;
+    -o-transition: box-shadow .1s linear;
 }
+.package a.btn:hover {
+    box-shadow: 0 3px 5px 1px #888;
+}
+.owl-prev {
+position: absolute;
+top: 0;
+left: 0px;
+background: url(../img/arrow-sprite.png) left center no-repeat;
+width: 24px;
+height: 100%;
+z-index: 1;
+}
+.owl-next {
+position: absolute;
+top: 0;
+right: 0px;
+background: url(../img/arrow-sprite.png) right center no-repeat;
+width: 24px;
+height: 100%;
+z-index: 1;
+}
+/*--video-box--*/
+.main-video-box {
+    background: #fff;
+}
+.main-video-item {
+    display: block;
+    width: 224px;
+    margin: 20px 20px 20px 0;
+    background: #EAEAEA;
+}
+.main-video-item .img-wrap {
+    width: 100%;
+    height: 163px;
+    overflow: hidden;
+}
+.main-video-item .img-wrap img {
+    max-width: 100%;
+}
+.main-video-item .
+.main-video-item .
