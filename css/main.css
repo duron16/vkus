@@ -10,6 +10,7 @@ h1, h2, h3, h4, h5 {text-align: center; font-weight: bold; margin: 10px 0;}
 html {height: 100%;}
 a {text-decoration: none; color: #000;}
 textarea {resize: none;}
+hr {margin: 0;}
 * {outline: none;}
 a, button {
     transition: background .1s linear, color .1s linear;
@@ -591,21 +592,97 @@ z-index: 1;
 /*--video-box--*/
 .main-video-box {
     background: #fff;
-    padding-bottom: 1px;
+    padding-bottom: 35px;
+}
+.main-video-box hr {
+    clear: both;
+    height: 1px;
+    background: #EFBF46;
+    border: 0;
+}
+.main-video-box .container:after {
+    content: '';
+    display: block;
+    clear: both;
 }
 .main-video-item {
+    float: left;
     display: block;
     width: 224px;
     margin: 20px 20px 20px 0;
     background: #EAEAEA;
+    box-shadow: -4px 4px 30px #bbb;
+    transition: box-shadow .1s linear;
+    -webkit-transition: box-shadow .1s linear;
+    -moz-transition: box-shadow .1s linear;
+    -ms-transition: box-shadow .1s linear;
+    -o-transition: box-shadow .1s linear;
+}
+.main-video-item:hover {
+    box-shadow: 0 0 30px 3px #666;
+}
+.main-video-item:nth-of-type(4n) {
+    margin-right: 0;
 }
 .main-video-item .img-wrap {
+    display: block;
     width: 100%;
     height: 163px;
     overflow: hidden;
+    position: relative;
 }
 .main-video-item .img-wrap img {
     max-width: 100%;
 }
-.main-video-item .
-.main-video-item .
+.main-video-item .view {
+    position: absolute;
+    bottom: 8px; left: 0;
+    padding: 0 0 0 45px;
+    color: #efbf46;
+    font: 168.75% "SegoeUIRegular";
+    background: transparent url(../img/views2.png) 10px center no-repeat;
+}
+.main-video-item .play {
+    position: absolute;
+    bottom: 8px; right: 10px;
+    width: 34px;
+    height: 34px;
+    background: transparent url(../img/video-btn.png) center center no-repeat;
+    background-size: contain;
+}
+.main-video-item .dscr {
+    display: block;
+    padding: 7px 8px 8px;
+}
+.main-video-item .dscr .name {
+    display: block;
+    height: 50px;
+    width: 65%;
+    color: #c89e62;
+    text-transform: uppercase;
+    font: 88% "AABebasNeue";
+    overflow: hidden;
+}
+.main-video-item .dscr .bottom {
+    display: block;
+    font: 75% "SegoeUIRegular";
+    color: #787276;
+    padding:
+}
+.main-video-item .dscr .bottom:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.main-video-item .dscr .cat {
+    float: left;
+}
+.main-video-item .dscr .date {
+    float: right;
+}
+/*--footer--*/
+.footer {
+    padding: 10px 0 55px;
+    background: #ccc url(../img/footer-bg.jpg) center center no-repeat;
+    background-size: cover;
+}
