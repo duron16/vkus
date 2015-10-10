@@ -591,6 +591,7 @@ z-index: 1;
 /*--video-box--*/
 .main-video-box {
     background: #fff;
+    padding-bottom: 1px;
 }
 .main-video-item {
     display: block;
