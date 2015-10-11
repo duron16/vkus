@@ -143,7 +143,10 @@ body {
     height: 80px;
     position: relative;
     z-index: 100;
-    background: linear-gradient(to right, rgba(244,210,71,.7)70%,rgba(233,169,69,.7));
+    background: linear-gradient(to right, rgba(244,210,71,.4)70%,rgba(233,169,69,.4));
+}
+.header .container {
+/*    outline: 1px solid red;*/
 }
 .header .container:after {
     content: '';
@@ -161,7 +164,7 @@ body {
 .header .logo a {
     width: 100%;
     position: absolute;
-    top: 20px;
+    top: 25px;
 }
 .header .logo a img {
     width: 100%;
@@ -171,20 +174,25 @@ body {
 }
 .nav li {
     float: left;
-    padding: 10px 0;
 }
 .nav li a {
     display: block;
-    padding: 20px 20px;
+    padding: 30px 17px 27px;
     font: 88% "SegoeUIRegular";
     color: #fff;
     text-transform: uppercase;
+    border-bottom: 4px solid transparent;
+    transition: border .1s linear;
+    -webkit-transition: border .1s linear;
+    -moz-transition: border .1s linear;
+    -ms-transition: border .1s linear;
+    -o-transition: border .1s linear;
 }
 .nav li a:hover {
-    background: #E9A945;
+    border-bottom: 4px solid #EAAD45;
 }
 .header .phones {
-    padding-left: 6.1%;
+    padding-left: 4.1%;
     font: 138% "SegoeUIRegular";
     color: #fff;
     display: table;
@@ -199,10 +207,10 @@ body {
     vertical-align: middle;
 }
 .header .menu {
-    float: right;
+    float: left;
     width: 32px;
     height: 32px;
-    margin: 24px 30px 0 0;
+    margin: 24px 18px 0;
     cursor: pointer;
     background: url(../img/menu-bg.png) 0 0 no-repeat;
 }
@@ -223,6 +231,7 @@ body {
 }
 .header .menu #showMenu .menu {
     float: none;
+    margin-left: -5px;
     display: inline-block;
 }
 .header .recipes-menu {
@@ -278,6 +287,34 @@ body {
 }
 .header .diet > a {
     background: url(../img/clover-bg.png) 25px center no-repeat;
+}
+#menu-mask {
+    display: none;
+    background: #000;
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    z-index: 999;
+}
+/*--auth--*/
+.auth {
+    float: right;
+    margin-top: 24px;
+}
+.auth a.authorization {
+    display: inline-block;
+    width: 23px;
+    height: 32px;
+    background: transparent url(../img/auth-sprite.png) 0 0 no-repeat;
+    vertical-align: middle;
+}
+.auth a.registration {
+    display: inline-block;
+    width: 26px;
+    height: 25px;
+    margin-left: 10px;
+    background: transparent url(../img/auth-sprite.png) 0 0 no-repeat;
+    background-position: -23px 0;
+    vertical-align: middle;
 }
 /*--slider--*/
 .slider-wrap {
@@ -685,4 +722,67 @@ z-index: 1;
     padding: 10px 0 55px;
     background: #ccc url(../img/footer-bg.jpg) center center no-repeat;
     background-size: cover;
+    color: #fff;
 }
+.footer a {
+    color: #fff;
+}
+.footer-nav {
+    text-align: center;
+}
+.footer-nav li {
+    display: inline-block;
+}
+.footer-nav li a {
+    display: block;
+/*    padding: 10px 20px;*/
+    padding: 10px 20%;
+    text-transform: uppercase;
+    font: 88% "SegoeUIRegular";
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: border .1s linear;
+    -webkit-transition: border .1s linear;
+    -moz-transition: border .1s linear;
+    -ms-transition: border .1s linear;
+    -o-transition: border .1s linear;
+}
+.footer-nav li a:hover {
+    border: 1px solid #fff;
+}
+.footer-phone {
+    padding: 7px 0;
+    text-align: center;
+    font: 138% "SegoeUIBold";
+}
+.footer-phone li {
+    display: inline-block;
+    margin: 0 2%;
+}
+.footer .social {
+    text-align: center;
+    margin-top: 13px;
+}
+.footer .social li {
+    display: inline-block;
+    margin: 0 10px;
+}
+.footer .social a {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: transparent url(../img/social-sprite.png) 0 0 no-repeat;
+    transition: background 0s;
+    -webkit-transition: background 0s;
+    -moz-transition: background 0s;
+    -ms-transition: background 0s;
+    -o-transition: background 0s;
+}
+.footer a.vk {background-position: 0 0}
+.footer a.fb {background-position: -24px 0}
+.footer a.inst {background-position: -48px 0}
+.footer a.gp {background-position: -72px 0;}
+.footer a.vk:hover {background-position: 0 -24px}
+.footer a.fb:hover {background-position: -24px -24px}
+.footer a.inst:hover {background-position: -48px -24px}
+.footer a.gp:hover {background-position: -72px -24px;}
