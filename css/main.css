@@ -813,9 +813,6 @@ z-index: 1;
     padding: 54px 0 25px;
     height: auto;
 }
-.video-box .base-nutrition-video-main {
-    outline: 1px solid red;
-}
 .base-nutrition-video-dscr .repost {
     float: right;
     margin-right: 8px;
@@ -841,6 +838,7 @@ z-index: 1;
 }
 .base-nutrition-video-dscr .repost a.fb {
     background-position: -16px 0;
+    margin-right: 5px;
 }
 .base-nutrition-video-dscr .repost a.tw {
     background-position: -39px 0;
@@ -870,14 +868,20 @@ z-index: 1;
     color: #787276;
     font: 88% "SegoeUIRegular";
 }
-.video-box .comments .leave-comment {
-/*    outline: 1px solid red;*/
-}
-.video-box .comments img {
+.video-box .comments .img-wrap {
     width: 44px;
     height: 44px;
+    overflow: hidden;
     border-radius: 50%;
     float: left;
+}
+.video-box .leave-comment .img-wrap:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.video-box .comments img {
+
 }
 .video-box .comments form {
     margin-left: 66px;
@@ -912,13 +916,19 @@ z-index: 1;
 .video-box .comments button:active {
     box-shadow: inset 0 0 10px #ccc;
 }
-.video-box .comments .comment-item-top img {
-    float: none;
+.video-box .comments img {
+/*    float: none;*/
+}
+.video-box .comments .comment-item {
+    margin-bottom: 18px;
 }
 .video-box .comments .comment-item-top {
-    outline: 1px solid red;
+    float: right;
+    width: 100%;
     font-size: 86%;
-    margin-left: 65px;
+    margin-left: -65px;
+    padding-left: 65px;
+    box-sizing: border-box;
 }
 .video-box .comments .comment-item-top:after {
     content: '';
@@ -939,10 +949,19 @@ z-index: 1;
 }
 .video-box .comments a.comment-answer {
     display: block;
-    outline: 1px solid red;
-/*    clear: both;*/
+    color: #8e898c;
+    text-decoration: underline;
+    clear: both;
 }
-.video-box .comments {}
+.video-box .comment {
+    padding-left: 65px;
+    clear: both;
+    font-size: 113%;
+}
+.video-box .comments .comment-item-answer {
+/*    margin-left: 67px;*/
+    margin-left: 12%;
+}
 
 .video-box ul.base-nutrition-video-list {
     overflow-y: auto;
