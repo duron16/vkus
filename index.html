@@ -13,6 +13,8 @@
     <script src="js/start.js"></script>
     <script src="js/jquery.bgdsize.js"></script>
     <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.jscrollpane.min.js"></script>
+    <script src="js/jquery.mousewheel.js"></script>
 
     <!--[if (lt IE 11)]>
         <style></style><![endif]-->
@@ -497,6 +499,14 @@
                 autoplayTimeout: 7000,
                 navText: ["&nbsp;","&nbsp;"],
             });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('.base-nutrition-video-list').jScrollPane();
+            $('.base-nutrition-video-list').jScrollPane({mouseWheelSpeed: 50});
+            $('.base-nutrition-video-list').jScrollPane({autoReinitialise: true});
+            $('.base-nutrition-video-list').jScrollPane({autoReinitialise: true, autoReinitialiseDelay: 5000});
         });
     </script>
 </body>
