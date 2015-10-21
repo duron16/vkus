@@ -37,45 +37,66 @@
                 <ul class="phones">
                     <li><span>(099) 963 25 96</span></li>
                 </ul>
-                <div class="menu" onclick="showMenu()">
-                    <div id="showMenu">
+                <div class="menu drop-down">
+                    <div class="drop-menu-main-sub">
                         <div class="header-btn">
+                            <ul class="phones">
+                                <li><span>(099) 963 25 96</span></li>
+                            </ul>
                             <div class="menu"></div>
                         </div>
                         <div class="recipes-menu">Рецепты</div>
-                        <ul>
+                        <ul class="first-ul">
                             <li><a href="#">Здоровое питание</a></li>
                             <li><a href="#">Вегетарианство</a></li>
                             <li><a href="#">Все</a></li>
                         </ul>
-                        <div class="menu-list kitchens-world"><a href="#">Кухня народов мира</a>
-                            <ul>
-                                <li><a href="#">Грузинская</a></li>
-                                <li><a href="#">Украинская</a></li>
-                                <li><a href="#">Российская</a></li>
-                                <li><a href="#">Мексиканская</a></li>
-                                <li><a href="#">Европейская</a></li>
-                                <li><a href="#">Азиатская</a></li>
-                                <li><a href="#">Американская</a></li>
-                                <li><a href="#">Африканская</a></li>
-                            </ul>
-                        </div>
-                        <div class="menu-list beverages"><a href="#">Напитки</a>
-                            <ul>
-                                <li><a href="#">Компот</a></li>
-                                <li><a href="#">Компот</a></li>
-                                <li><a href="#">Компот</a></li>
-                                <li><a href="#">Компот</a></li>
-                            </ul>
-                        </div>
-                        <div class="menu-list diet"><a href="#">Диеты</a>
-                            <ul>
-                                <li><a href="#">Диета №1</a></li>
-                                <li><a href="#">Диета №1</a></li>
-                                <li><a href="#">Диета №1</a></li>
-                                <li><a href="#">Диета №1</a></li>
-                            </ul>
-                        </div>
+                        <ul class="menu-list kitchens-world">
+                            <li class="button"><a href="#">Кухня народов мира</a></li>
+                            <li class="dropdown">
+                                <ul>
+                                    <li><a href="#">Грузинская</a></li>
+                                    <li><a href="#">Украинская</a></li>
+                                    <li><a href="#">Российская</a></li>
+                                    <li><a href="#">Мексиканская</a></li>
+                                    <li><a href="#">Европейская</a></li>
+                                    <li><a href="#">Азиатская</a></li>
+                                    <li><a href="#">Американская</a></li>
+                                    <li><a href="#">Африканская</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <ul class="menu-list beverages">
+                            <li class="button"><a href="#">Напитки</a></li>
+                            <li class="dropdown">
+                                <ul>
+                                    <li><a href="#">Компот</a></li>
+                                    <li><a href="#">Компот</a></li>
+                                    <li><a href="#">Компот</a></li>
+                                    <li><a href="#">Компот</a></li>
+                                    <li><a href="#">Компот</a></li>
+                                    <li><a href="#">Компот</a></li>
+                                    <li><a href="#">Компот</a></li>
+                                    <li><a href="#">Компот</a></li>
+                                    <li><a href="#">Компот</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                        <ul class="menu-list diet">
+                            <li class="button"><a href="#">Диеты</a></li>
+                            <li class="dropdown">
+                                <ul>
+                                    <li><a href="#">Диета №1</a></li>
+                                    <li><a href="#">Диета №1</a></li>
+                                    <li><a href="#">Диета №1</a></li>
+                                    <li><a href="#">Диета №1</a></li>
+                                    <li><a href="#">Диета №1</a></li>
+                                    <li><a href="#">Диета №1</a></li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                 </div>
                 <div class="auth">
@@ -277,7 +298,6 @@
                 </ul>
             </div>
         </div>
-    <div id="menu-mask"></div>
     </div>
     <script>
         $(document).ready(function() {
@@ -285,16 +305,15 @@
         });
     </script>
     <script>
-        var visible = true;
-        function showMenu() {
-            if(visible) {
-                document.getElementById('showMenu').style.display = 'block';
-                visible = false;
-            } else {
-                document.getElementById('showMenu').style.display = 'none';
-                visible = true;
-            }
-        }
+        $(document).ready(function(){
+            $.easing.def = "easeInOutQuad";
+            $('li.button a').click(function(e){
+                var dropDown = $(this).parent().next();
+                $('.dropdown').not(dropDown).slideUp();
+                dropDown.slideToggle();
+                e.preventDefault();
+            })
+        });
     </script>
     <script>
         $(document).ready(function(){
@@ -305,6 +324,31 @@
                 nav: true,
                 autoplayTimeout: 7000,
                 navText: ["&nbsp;","&nbsp;"],
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            function hideallDropdowns() {
+                $(".dropped .drop-menu-main-sub").hide();
+                $(".dropped").removeClass('dropped');
+                $(".dropped .drop-menu-main-sub .title").unbind("click");
+            }
+            function showDropdown(el) {
+                var el_li = $(el).parent().addClass('dropped');
+                el_li
+                    .find('.title')
+                    .click(function () {
+                    hideallDropdowns();
+                })
+                    .html($(el).html());
+                el_li.find('.drop-menu-main-sub').show();
+            }
+            $(".drop-down").click(function(){
+                showDropdown(this);
+            });
+            $(document).mouseup(function () {
+                hideallDropdowns();
             });
         });
     </script>

@@ -309,7 +309,7 @@ body {
     cursor: pointer;
     background: url(../img/menu-bg.png) 0 0 no-repeat;
 }
-.header .menu #showMenu {
+.header .menu .drop-menu-main-sub {
     z-index: 9999;
     display: none;
     width: 455px;
@@ -319,16 +319,16 @@ body {
     left: -200px;
     cursor: default;
 }
-.header .menu #showMenu .header-btn {
+.header .menu .header-btn {
     text-align: center;
     height: 80px;
     position: relative;
 }
-.header .menu #showMenu .header-btn .phones {
+.header .menu .header-btn .phones {
     padding: 0 0 0 29px;
     color: #e9a945;
 }
-.header .menu #showMenu .menu {
+.header .menu .menu {
     float: left;
 }
 .header .recipes-menu {
@@ -579,7 +579,6 @@ display: none;
 ul.base-nutrition-video-list {
     float: right;
     width: 39.58%;
-    outline: 1px solid red;
     height: 100%;
 /*    overflow-y: auto;*/
     overflow-y: scroll;
@@ -1056,4 +1055,44 @@ z-index: 1;
 }
 .video-box ul.base-nutrition-video-list li.video-list-item {
     background: inherit;
+}
+
+/*--breadcrumb--*/
+.breadcrumb {
+    margin-top: -60px;
+    font-size: 88%;
+    font: 88% "SegoeUIRegular";
+    text-transform: none;
+    color: #fff;
+}
+.breadcrumb ul {
+    float: right;
+}
+.breadcrumb:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.breadcrumb ul li {
+    display: inline-block;
+    margin: 1px;
+}
+.breadcrumb ul li a {
+    display: inline-block;
+    padding: 2px;
+    color: #fff;
+    text-transform: none;
+}
+.breadcrumb ul li a:hover {
+    text-decoration: underline;
+}
+.breadcrumb ul li + li:before {
+    content: '\005c';
+    margin: 0 5px 0 0;
+}
+
+/*--package--*/
+.package-box {
+    padding: 30px 0;
+    background: #fff;
 }
