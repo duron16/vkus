@@ -576,10 +576,17 @@ display: none;
     padding-left: 20px;
     background: url(../img/views.png) left center no-repeat;
 }
-ul.base-nutrition-video-list {
+.nutrition-video-list-wrap {
     float: right;
     width: 39.58%;
-    height: 100%;
+}
+.nutrition-video-list-wrap:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+ul.base-nutrition-video-list {
+    height: 372px;
 /*    overflow-y: auto;*/
     overflow-y: scroll;
 }
@@ -709,7 +716,7 @@ li.video-list-item .video-dscr-wrap .date {
     -o-transition: box-shadow .1s linear;
 }
 .package a.btn:hover {
-    box-shadow: 0 3px 5px 1px #888;
+    box-shadow: 0 0 7px 1px #EFBF46;
 }
 .owl-prev {
 position: absolute;
@@ -1095,4 +1102,137 @@ z-index: 1;
 .package-box {
     padding: 30px 0;
     background: #fff;
+}
+.package-box:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.ingredients-wrap {
+    box-shadow: -8px 8px 20px #cfcfcf;
+    margin-top: 28px;
+}
+.ingredients-item {
+    background: #eaeaea;
+    padding: 6px 12px 4px 8px;
+    color: #c89e62;
+    font: 75% "SegoeUIRegular";
+}
+.ingredients-item + .ingredients-item {
+    border-top: 1px solid #bdbdbd;
+}
+.ingredients-item .img-wrap {
+    float: left;
+    width: 39px;
+    height: 29px;
+    margin-right: 11px;
+    overflow: hidden;
+}
+.ingredients-item .img-wrap img {
+    width: 100%;
+}
+.ingredients-item .ingredients-dscr {
+    margin-right: 110px;
+    margin-left: 50px;
+}
+.ingredients-item .caption {
+    text-transform: uppercase;
+    font: 116.6% "AABebasNeue";
+    font: 14px "AABebasNeue";
+    margin-bottom: -2px;
+    height: 16px;
+    overflow: hidden;
+}
+.ingredients-item a.more {
+    float: right;
+    margin-top: 2px;
+    padding: 4px 15px 5px;
+    background: #e9a945;
+    text-transform: uppercase;
+    color: #fff;
+}
+.ingredients-item a.more:hover {
+    background: #e9981b;
+}
+.ingredients-item ul {
+/*    display: none;*/
+    background: #eaeaea;
+    margin: 4px -12px -4px -8px;
+    color: #787276;
+    padding: 7px 8px 12px 60px !important;
+}
+.ingredients-item ul li:first-child {
+    line-height: 1.5;
+}
+.ingredients-item ul li:nth-child(2) {
+    line-height: 2;
+}
+.ingredients-item.active {
+    background: #8cb8e5;
+    color: #fff;
+}
+.ingredients-item.active a.more {
+    color: #8cb8e5;
+    background: #fff;
+}
+
+/*--slider-mini-wrap--*/
+.slider-mini-wrap {
+    margin: 25px 0;
+}
+.slider-mini-wrap .caption {
+    color: #c89e62;
+    font: 36px "AABebasNeue";
+    padding: 7px 0 20px;
+}
+.slider-mini {
+    padding: 0 60px;
+    padding: 0 14%;
+    box-sizing: border-box;
+}
+.slider-mini .package {
+    width: 253px;
+    margin: 5px 20px 20px;
+    box-shadow: -8px 8px 20px #cfcfcf;
+}
+.slider-mini .owl-prev {
+background: url(../img/slider-mini-arrow.png) left center no-repeat;
+width: 14%;
+}
+.slider-mini .owl-next {
+background: url(../img/slider-mini-arrow.png) right center no-repeat;
+width: 14%;
+}
+
+/*--packages-page--*/
+.packages-box {
+    padding-top: 45px;
+    background: #fff;
+}
+.packages-wrap {
+/*    padding: 0 68px;*/
+    padding: 0 7.1%;
+}
+.packages-wrap:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+.packages-wrap .package {
+    float: left;
+/*    width: 254px;*/
+    width: 30.86%;
+/*    padding: 21px;*/
+    padding: 2.55%;
+/*    margin: 0 10px 45px;*/
+    margin: 0 1.2% 45px;
+    box-shadow: -8px 8px 20px #cfcfcf;
+    transition: box-shadow .1s linear;
+    -webkit-transition: box-shadow .1s linear;
+    -moz-transition: box-shadow .1s linear;
+    -ms-transition: box-shadow .1s linear;
+    -o-transition: box-shadow .1s linear;
+}
+.packages-wrap .package:hover {
+    box-shadow: -8px 8px 20px #a1a1a1;
 }
