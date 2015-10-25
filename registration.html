@@ -66,7 +66,6 @@
                                 </ul>
                             </li>
                         </ul>
-
                         <ul class="menu-list beverages">
                             <li class="button"><a href="#">Напитки</a></li>
                             <li class="dropdown">
@@ -99,113 +98,44 @@
                     </div>
                 </div>
                 <div class="auth">
-                    <a href="#" class="authorization" title="Вход"></a>
-                    <a href="#" class="registration" title="Регистрация"></a>
+                    <a href="#feedback-dialog" name="modal" class="authorization" title="Вход"></a>
+<!--                    <a href="#" class="registration" title="Регистрация"></a>-->
                 </div>
             </div>
         </div><!--header-end-->
 
 <!--content-->
         <div class="content">
-            <div class="packages-page">
+            <div class="registration-page">
                 <div class="main-h1">
                     <div class="breadcrumb">
                         <div class="container">
                             <ul>
                                 <li><a href="/">Главная</a></li>
-                                <li>Все пакеты</li>
+                                <li>Регистрация</li>
                             </ul>
                         </div>
                     </div>
                     <div class="container">
-                        <h2>все пакеты</h2>
+                        <h2>Регистрация</h2>
                     </div>
                 </div>
-                <div class="packages-box">
+                <div class="registration-box">
                     <div class="container">
-                        <div class="packages-wrap">
-                            <div class="package">
-                                <div class="price">
-                                    <p>цена пакета</p>
-                                    <p>300 грн.</p>
-                                    <span>550 грн.</span>
-                                </div>
-                                <div class="img-wrap">
-                                    <img src="img/package-img.png" alt="q123">
-                                </div>
-                                <div class="amount-clips">10 роликов</div>
-                                <div class="category">ГРЕЧЕСКая <br> кухня</div>
-                                <a href="#" class="btn">Заказать</a>
-                            </div>
-                            <div class="package">
-                                <div class="price">
-                                    <p>цена пакета</p>
-                                    <p>300 грн.</p>
-                                    <span>550 грн.</span>
-                                </div>
-                                <div class="img-wrap">
-                                    <img src="img/package-img.png" alt="q123">
-                                </div>
-                                <div class="amount-clips">10 роликов</div>
-                                <div class="category">Мексиканская <br> кухня</div>
-                                <a href="#" class="btn">Заказать</a>
-                            </div>
-                            <div class="package">
-                                <div class="price">
-                                    <p>цена пакета</p>
-                                    <p>300 грн.</p>
-                                    <span>550 грн.</span>
-                                </div>
-                                <div class="img-wrap">
-                                    <img src="img/package-img.png" alt="q123">
-                                </div>
-                                <div class="amount-clips">10 роликов</div>
-                                <div class="category">Украинская <br> кухня</div>
-                                <a href="#" class="btn">Заказать</a>
-                            </div>
-                            <div class="package">
-                                <div class="price">
-                                    <p>цена пакета</p>
-                                    <p>300 грн.</p>
-                                    <span>550 грн.</span>
-                                </div>
-                                <div class="img-wrap">
-                                    <img src="img/package-img.png" alt="q123">
-                                </div>
-                                <div class="amount-clips">10 роликов</div>
-                                <div class="category">ГРЕЧЕСКая <br> кухня</div>
-                                <a href="#" class="btn">Заказать</a>
-                            </div>
-                            <div class="package">
-                                <div class="price">
-                                    <p>цена пакета</p>
-                                    <p>300 грн.</p>
-                                    <span>550 грн.</span>
-                                </div>
-                                <div class="img-wrap">
-                                    <img src="img/package-img.png" alt="q123">
-                                </div>
-                                <div class="amount-clips">10 роликов</div>
-                                <div class="category">Мексиканская <br> кухня</div>
-                                <a href="#" class="btn">Заказать</a>
-                            </div>
-                            <div class="package">
-                                <div class="price">
-                                    <p>цена пакета</p>
-                                    <p>300 грн.</p>
-                                    <span>550 грн.</span>
-                                </div>
-                                <div class="img-wrap">
-                                    <img src="img/package-img.png" alt="q123">
-                                </div>
-                                <div class="amount-clips">10 роликов</div>
-                                <div class="category">Украинская <br> кухня</div>
-                                <a href="#" class="btn">Заказать</a>
-                            </div>
-                        </div>
+                        <form class="reg" action="#">
+                            <h4></h4>
+                            <label class="user"><input type="text" required placeholder="Имя..."></label>
+                            <label class="user"><input type="text" required placeholder="Фамилия"></label>
+                            <label class="mail"><input type="email" required placeholder="Email"></label>
+                            <label class="tel"><input type="tel" required placeholder="Телефон"></label>
+                            <label class="login"><input type="text" required placeholder="Логин"></label>
+                            <label class="pass"><input type="password" required placeholder="Пароль"></label>
+                            <label class="pass"><input type="password" required placeholder="Повторите пароль"></label>
+                            <button class="btn-blue">Зарегистрироваться</button>
+                        </form>
                     </div>
-                </div><!--packages-box-end-->
-            </div><!--packages-page-end-->
+                </div><!--shop-box-end-->
+            </div><!--shop-page-end-->
         </div><!--content-end-->
         <div class="footer">
             <div class="container">
@@ -227,6 +157,24 @@
             </div>
         </div>
     </div>
+    <div class="feedback-box">
+        <div id="feedback-dialog" class="window">
+            <div class="feedback-content">
+                <form class="reg" action="#" method="POST">
+                    <h4>Вход</h4>
+                    <label class="login"><input type="text" required placeholder="Логин"></label>
+                    <label class="pass"><input type="password" required placeholder="Пароль"></label>
+                    <button class="btn-blue">Войти</button>
+                    <div class="clear"></div>
+                    <input  type="checkbox" id="checkbox-1">
+                    <label for="checkbox-1" class="new-check">Запомнить меня</label>
+                    <a href="#" class="forgot-pass">Забыли пароль?</a>
+                </form>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    <div class="feedback-mask"></div>
     <script>
         $(document).ready(function() {
             $('.background-size-cover').bgdSize('cover');
@@ -265,6 +213,32 @@
             });
             $(document).mouseup(function () {
                 hideallDropdowns();
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('a[name=modal]').click(function(e) {
+                e.preventDefault();
+                var id = $(this).attr('href');
+                var maskHeight = $(document).height();
+                var maskWidth = $(window).width();
+                $('.feedback-mask').css({'width':maskWidth,'height':maskHeight});
+                $('.feedback-mask').fadeIn(100);
+                $('.feedback-mask').fadeTo("fast",0.5);
+                var winH = $(window).height();
+                var winW = $(window).width();
+                $(id).css('top',  winH/2-$(id).height()/2);
+                $(id).css('left', winW/2-$(id).width()/2);
+                $(id).fadeIn(100);
+            });
+            $('.window .feedback-link-close').click(function (e) {
+                e.preventDefault();
+                $('.feedback-mask, .window').hide();
+            });
+            $('.feedback-mask').click(function () {
+                $(this).hide();
+                $('.window').hide();
             });
         });
     </script>
