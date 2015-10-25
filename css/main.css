@@ -1531,4 +1531,12 @@ form.reg .btn-blue {
 .payment-block table td img {
     max-width: 100px;
 }
-/*--*/
+/*--services-page--*/
+.services-box {
+    padding: 54px 0 34px;
+    background: #fff;
+}
+.services-item {
+    padding: 34px 17px 36px;
+    background: #c89e62 url()  no-repeat;
+}
