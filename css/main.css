@@ -951,18 +951,17 @@ z-index: 1;
     padding: 54px 0 25px;
     height: auto;
 }
-.base-nutrition-video-dscr .repost {
+.repost {
     float: right;
     margin-right: 8px;
 }
-.base-nutrition-video-dscr .repost li {
+.repost li {
     float: left;
-
 }
-.base-nutrition-video-dscr .repost li + li {
+.repost li + li {
     margin-left: 4px;
 }
-.base-nutrition-video-dscr .repost li a {
+.repost li a {
     display: block;
     width: 17px;
     height: 14px;
@@ -974,20 +973,20 @@ z-index: 1;
     -ms-transition: background 0s;
     -o-transition: background 0s;
 }
-.base-nutrition-video-dscr .repost a.fb {
+.repost a.fb {
     background-position: -16px 0;
     margin-right: 5px;
 }
-.base-nutrition-video-dscr .repost a.tw {
+.repost a.tw {
     background-position: -39px 0;
 }
-.base-nutrition-video-dscr .repost a.vk:hover {
+.repost a.vk:hover {
     background-position: 3px -15px;
 }
-.base-nutrition-video-dscr .repost a.fb:hover {
+.repost a.fb:hover {
     background-position: -16px -15px;
 }
-.base-nutrition-video-dscr .repost a.tw:hover {
+.repost a.tw:hover {
     background-position: -39px -15px;
 }
 .video-box-article {
@@ -1537,7 +1536,8 @@ form.reg .btn-blue {
 .services-item {
     padding: 34px 17px 36px;
     background: #8cb8e5 url(../img/dish.png) right 72% no-repeat;
-    font: 18px/1.1 "SegoeUIRegular";
+/*    font: 18px/1.1 "SegoeUIRegular";*/
+    font: 113%/1.1 "SegoeUIRegular";
     color: #fff;
     margin-bottom: 20px;
 }
@@ -1556,7 +1556,8 @@ form.reg .btn-blue {
     margin-right: 220px;
 }
 .services-item a.btn {
-    font: 22px "SegoeUIRegular";
+/*    font: 22px "SegoeUIRegular";*/
+    font: 122% "SegoeUIRegular";
     color: #c89e62;
     box-sizing: border-box;
     padding: 7px 48px 9px 12px;
@@ -1585,15 +1586,84 @@ form.reg .btn-blue {
     color: inherit;
     margin: 15px 0 0;
     text-transform: uppercase;
-    font: 36px "AABebasNeue";
+/*    font: 36px "AABebasNeue";*/
+    font: 200% "AABebasNeue";
     margin-right: 230px;
 }
 /*--service-page--*/
 .service-box {
-    outline: 1px solid red;
+    padding: 54px 0 10px;
 }
+.service-img-dscr:after,
 .service-box .container:after {
     content: '';
     display: block;
     clear: both;
+}
+.service-left {
+/*    width: 699px;*/
+    width: 72.81%;
+    color: #8e898c;
+    float: left;
+/*    font: 14px "SegoeUIRegular";*/
+    font: 88% "SegoeUIRegular";
+}
+.service-img-dscr {
+    background: #c89e62;
+    margin: 20px 0 25px;
+    box-shadow: -8px 8px 20px #cfcfcf;
+    padding: 7px 10px;
+    color: #787276;
+}
+.service-img-dscr .repost {
+    float: left;
+}
+.service-img-dscr .repost a {
+    margin-top: 3px;
+}
+.service-img-dscr .reviews {
+    float: right;
+    padding-left: 20px;
+    background: url(../img/views.png) left center no-repeat;
+}
+.service-img-dscr .date {
+    float: right;
+    margin-right: 10px;
+}
+.service-box article {
+    margin-bottom: 25px;
+}
+.service-box h1 {
+    color: #efbf46;
+/*    font: 53px/1.2 "AABebasNeue";*/
+    font: 331%/1.3 "AABebasNeue";
+    text-transform: uppercase;
+}
+.service-box h3 {
+    color: #efbf46;
+    font: 225%/1.2 "AABebasNeue";
+    text-transform: uppercase;
+}
+.service-right {
+/*    width: 241px;*/
+    width: 25.1%;
+    outline: 1px solid red;
+    float: right;
+}
+.service-right h3 {
+    color: #c89e62;
+    margin: -9px 0 20px;
+}
+.service-right .services-item h3 {
+    color: inherit;
+    margin: 15px 0 0;
+    text-transform: uppercase;
+/*    font: 36px "AABebasNeue";*/
+    font: 200% "AABebasNeue";
+    margin-right: 230px;
+}
+.service-right .services-item a {
+    float: none;
+    display: block;
+    padding: 7px 38px 9px 12px;
 }
