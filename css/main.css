@@ -9,7 +9,7 @@ table {border-collapse: collapse;border-spacing: 0;}
 h1, h2, h3, h4, h5 {text-align: left; font-weight: bold; margin: 10px 0; color: #c89e62;}
 html {height: 100%;}
 a {text-decoration: none; color: #000;}
-textarea {resize: none;}
+textarea {resize: none; overflow: auto;}
 hr {margin: 0;}
 * {outline: none;}
 a, button {
@@ -146,83 +146,6 @@ a, button {
     font-style: normal;
     font-weight: normal;
 }
-/*--scroll--*/
-/*CSS Styles that are needed by jScrollPane for it to operate correctly.*/
-.jspContainer {
-	overflow: hidden;
-	position: relative;
-}
-.jspPane {
-	position: absolute;
-}
-.jspVerticalBar {
-	position: absolute;
-	top: 0;
-	right: 4px;
-	width: 10px;
-	height: 100%;
-	background: red;
-}
-.jspHorizontalBar {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 16px;
-	background: red;
-}
-.jspCap {
-	display: none;
-}
-.jspHorizontalBar .jspCap {
-	float: left;
-}
-.jspTrack {
-	background: #EFBF46;
-	position: relative;
-}
-.jspDrag {
-	background: #E9A945;
-	position: relative;
-	top: 0;
-	left: 0;
-	cursor: pointer;
-}
-.jspHorizontalBar .jspTrack,
-.jspHorizontalBar .jspDrag {
-	float: left;
-	height: 100%;
-}
-.jspArrow {
-	background: #EFBF46;
-	text-indent: -20000px;
-	display: block;
-	cursor: pointer;
-	padding: 0;
-	margin: 0;
-}
-.jspArrow.jspDisabled {
-	cursor: default;
-	background: #80808d;
-}
-.jspVerticalBar .jspArrow {height: 16px;}
-.jspHorizontalBar .jspArrow {
-	width: 10px;
-	float: left;
-	height: 100%;
-}
-.jspVerticalBar .jspArrow:focus {
-	outline: none;
-}
-.jspCorner {
-	background: #eeeef4;
-	float: left;
-	height: 100%;
-}
-* html .jspCorner {
-	margin: 0 -3px 0 0;
-}
-/*--scroll-end--*/
 /*--table-frame--*/
 .table {
     display: table;
@@ -491,7 +414,6 @@ display: none;
 /*    z-index: 100;*/
 }
 .dish-popular .dish-popular-item {
-/*    outline: 1px solid red;*/
     width: 25%;
     height: 326px;
     float: left;
@@ -500,10 +422,12 @@ display: none;
     margin: 0;
     color: #fff;
 }
+.dish-popular .dish-popular-item:last-child {
+    background: #8CB8E5 !important;
+}
 .dish-popular-inner {
     padding: 36px 16px;
     background: url(../img/pan.png) right 93% no-repeat;
-/*    outline: 1px solid red;*/
 }
 .dish-popular-inner a {
     display: inline-block;
@@ -516,6 +440,9 @@ display: none;
 }
 .dish-popular-inner a:hover {
     box-shadow: 0 0 0 2px #C89E62, 0 0 0 4px #fff;
+}
+.dish-popular .dish-popular-item:last-child a:hover {
+    box-shadow: 0 0 0 2px #8CB8E5, 0 0 0 4px #fff;
 }
 .dish-popular-inner a:active {
     box-shadow: 0 0 0 2px #fff, 0 0 0 4px #fff, 0 0 5px 5px #fff;
@@ -531,9 +458,6 @@ display: none;
 .dish-popular .dish-popular-item .dish {
     height: 100px;
     overflow: hidden;
-}
-.dish-popular .dish-blue {
-    background: #8CB8E5 !important;
 }
 /*--base-nutrition-box--*/
 .base-nutrition-box {
@@ -559,9 +483,6 @@ display: none;
     height: 320px;
     overflow: hidden;
     margin-bottom: 10px;
-}
-.base-nutrition-video-dscr {
-    background: #C89E62;
 }
 .base-nutrition-video-main .play-btn {
     position: absolute;
@@ -674,6 +595,7 @@ li.video-list-item .video-dscr-wrap span {
 }
 li.video-list-item .video-dscr-wrap .name {
     font: 116.67% "AABebasNeue";
+    text-transform: uppercase;
 }
 li.video-list-item .video-dscr-wrap .date {
     color: #787276;
@@ -746,6 +668,7 @@ li.video-list-item .video-dscr-wrap .date {
     line-height: 1.2;
     height: 86px;
     overflow: hidden;
+    text-transform: uppercase;
 }
 .package a.btn {
     display: block;
@@ -1053,7 +976,7 @@ z-index: 1;
     box-sizing: border-box;
 }
 .comments .comment-item-top:after {
-    content: '';
+/*    content: '';*/
     display: block;
     clear: both;
 }
@@ -1069,11 +992,13 @@ z-index: 1;
     padding-top: 4px;
     margin-left: 15px;
 }
-.comments a.comment-answer {
-    display: block;
+.comments .comment-answer {
+    clear: both;
+}
+.comments .comment-answer a {
+/*    display: block;*/
     color: #8e898c;
     text-decoration: underline;
-    clear: both;
 }
 .comment {
     padding-left: 65px;
@@ -1220,8 +1145,10 @@ z-index: 1;
     padding: 0 60px;
     padding: 0 14%;
     box-sizing: border-box;
+    height: 392px;
 }
 .slider-mini .package {
+    float: left;
     width: 253px;
     margin: 5px 20px 20px;
     box-shadow: -8px 8px 20px #cfcfcf;
@@ -1514,6 +1441,12 @@ form.reg .btn-blue {
     color: #a3a3a3;
     font: 88% "SegoeUIRegular";
 }
+.payment-block table a {
+    color: inherit;
+}
+.payment-block table a:hover {
+    text-decoration: underline !important;
+}
 .payment-block table tr td:first-child {
     text-align: center;
     width: 115px;
@@ -1544,7 +1477,7 @@ form.reg .btn-blue {
 .services-item:nth-of-type(3n-1) {
     background: #c89e62 url(../img/dish.png) right 72% no-repeat;
 }
-.services-item:nth-child(3n) {
+.services-item:nth-of-type(3n) {
     background: #efbf46 url(../img/dish.png) right 72% no-repeat;
 }
 .services-item .category {
@@ -1576,10 +1509,10 @@ form.reg .btn-blue {
     transition: box-shadow 0s linear;
     box-shadow: 0 0 0 2px #fff, 0 0 0 4px #fff, 0 0 5px 5px #fff !important;
 }
-.services-item:nth-child(3n-1) a.btn:hover {
+.services-item:nth-of-type(3n-1) a.btn:hover {
     box-shadow: 0 0 0 2px #c89e62, 0 0 0 4px #fff;
 }
-.services-item:nth-child(3n) a.btn:hover {
+.services-item:nth-of-type(3n) a.btn:hover {
     box-shadow: 0 0 0 2px #efbf46, 0 0 0 4px #fff;
 }
 .services-item h3 {
@@ -1647,7 +1580,6 @@ form.reg .btn-blue {
 .service-right {
 /*    width: 241px;*/
     width: 25.1%;
-    outline: 1px solid red;
     float: right;
 }
 .service-right h3 {
@@ -1656,11 +1588,14 @@ form.reg .btn-blue {
 }
 .service-right .services-item h3 {
     color: inherit;
-    margin: 15px 0 0;
+    padding-bottom: 20px;
     text-transform: uppercase;
 /*    font: 36px "AABebasNeue";*/
     font: 200% "AABebasNeue";
     margin-right: 230px;
+    display: table-cell;
+    vertical-align: bottom;
+    height: 120px;
 }
 .service-right .services-item a {
     float: none;

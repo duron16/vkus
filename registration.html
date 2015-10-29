@@ -98,7 +98,7 @@
                     </div>
                 </div>
                 <div class="auth">
-                    <a href="#feedback-dialog" name="modal" class="authorization" title="Вход"></a>
+                    <a href="#feedback-dialog" id="modal" class="authorization" title="Вход"></a>
 <!--                    <a href="#" class="registration" title="Регистрация"></a>-->
                 </div>
             </div>
@@ -123,7 +123,6 @@
                 <div class="registration-box">
                     <div class="container">
                         <form class="reg" action="#">
-                            <h4></h4>
                             <label class="user"><input type="text" required placeholder="Имя..."></label>
                             <label class="user"><input type="text" required placeholder="Фамилия"></label>
                             <label class="mail"><input type="email" required placeholder="Email"></label>
@@ -132,6 +131,38 @@
                             <label class="pass"><input type="password" required placeholder="Пароль"></label>
                             <label class="pass"><input type="password" required placeholder="Повторите пароль"></label>
                             <button class="btn-blue">Зарегистрироваться</button>
+                            <!--[if IE 9]>
+                    <script type="text/javascript">
+                    (function setPlaceHolders(){
+                    var input = document.getElementsByTagName('input'); // get all text fields
+                    var cls = "placeholdr"; // set name of the class
+
+                    if (input) { // if fields found
+                        for (var i=0; i < input.length; i++) {
+                            var t = input[i];
+                            var txt = t.getAttribute("placeholder");
+
+                            if (txt.length > 0) { // if placeholder found
+                                t.className = t.value.length == 0 ? t.className+" "+cls : t.className; // add class
+                                t.value = t.value.length > 0 ? t.value : txt; // if no value found
+
+                                t.onfocus = function() { // on focus
+                                    this.className = this.className.replace(cls);
+                                    this.value = this.value == this.getAttribute("placeholder") ? "" : this.value;
+                                }
+
+                                t.onblur = function() { // on focus out
+                                    if (this.value.length == 0) {
+                                        this.value = this.getAttribute("placeholder");
+                                        this.className = this.className+" "+cls; // add class
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    })();
+                    </script>
+                    <![endif]-->
                         </form>
                     </div>
                 </div><!--shop-box-end-->
@@ -218,7 +249,7 @@
     </script>
     <script>
         $(document).ready(function() {
-            $('a[name=modal]').click(function(e) {
+            $('a[id=modal]').click(function(e) {
                 e.preventDefault();
                 var id = $(this).attr('href');
                 var maskHeight = $(document).height();
